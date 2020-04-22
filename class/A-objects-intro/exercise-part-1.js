@@ -17,3 +17,12 @@ var car = {
 
 */
 
+const movil = {
+    brand: "Huawei",
+    model: "P-20",
+    color: "blue",
+};
+const bicycle = {};
+const applePie = {};
+const room = {};
+const workoutRoutine = {};
