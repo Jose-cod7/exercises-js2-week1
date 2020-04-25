@@ -6,38 +6,54 @@ and for each object, `console.log()` out the sentence:
 
 Here is the array:
 
-*/ 
+*/
 
-var writers = [
-  {
-    firstName: "Virginia",
-    lastName: "Woolf",
-    occupation: "writer",
-    age: 59,
-    alive: false
-  },
-  {
-    firstName: "Zadie",
-    lastName: "Smith",
-    occupation: "writer",
-    age: 41,
-    alive: true
-  },
-  {
-    firstName: "Jane",
-    lastName: "Austen",
-    occupation: "writer",
-    age: 41,
-    alive: false
-  },
-  {
-    firstName: "bell",
-    lastName: "hooks",
-    occupation: "writer",
-    age: 64,
-    alive: true
-  },
+var writers = [{
+        firstName: "Virginia",
+        lastName: "Woolf",
+        occupation: "writer",
+        age: 59,
+        alive: false,
+    },
+    {
+        firstName: "Zadie",
+        lastName: "Smith",
+        occupation: "writer",
+        age: 41,
+        alive: true,
+    },
+    {
+        firstName: "Jane",
+        lastName: "Austen",
+        occupation: "writer",
+        age: 41,
+        alive: false,
+    },
+    {
+        firstName: "bell",
+        lastName: "hooks",
+        occupation: "writer",
+        age: 64,
+        alive: true,
+    },
 ];
+
+writers.forEach(function(writer) {
+    if (writer.alive) {
+        console.log(
+            "Hi, my names is " +
+            writer.firstName +
+            " " +
+            writer.lastName +
+            ". " +
+            "I am " +
+            writer.age +
+            " years old, " +
+            "and work as a " +
+            writer.occupation
+        );
+    }
+});
 
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.

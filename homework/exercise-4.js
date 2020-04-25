@@ -59,18 +59,20 @@ var restaurantFinderApplication = {
     applicationVersion: "1.0",
     restaurants: restaurants,
     findAvailableRestaurants: function(numberOfPeople) {
-        for (-- -- - )
+        // declare our temp variable
+        let restaurantAvailable = "";
+        for (let i = 0; i < restaurants.length; i++) {
             if (
-                restaurants[].totalSeats - restaurants.numberOfCustomers >=
+                restaurants[i].totalSeats - restaurants[i].numberOfCustomers >=
                 numberOfPeople
             ) {
-                return restaurants.name;
+                // add new to temp var
+                restaurantAvailable += restaurants[i].name + ",";
             }
-            // Complete here
+        }
+        return restaurantAvailable;
     },
-    findRestaurantServingDish: function(dishName) {
-        // Complete here
-    },
+    findRestaurantServingDish: function(dishName) {},
     countNumberOfRestaurantsInArea: function(area) {
         // Complete here
     },

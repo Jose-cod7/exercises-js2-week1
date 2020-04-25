@@ -8,6 +8,7 @@ var person = {
     friends: ["John", "Nina"],
     makeFriend: function(x) {
         return (this.friends[2] = x);
+        // makeFriend: newName => this.friends.push(newName) another way to solvet
     },
 };
 
