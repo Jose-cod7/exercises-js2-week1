@@ -72,9 +72,20 @@ var restaurantFinderApplication = {
         }
         return restaurantAvailable;
     },
-    findRestaurantServingDish: function(dishName) {},
+    findRestaurantServingDish: function(dishName) {
+        const filRestSalad = this.restaurants.filter(function(rest) {
+            return rest.menu.includes(dishName);
+        });
+        return filRestSalad.map(function(rest) {
+            return rest.name;
+        });
+    },
+
     countNumberOfRestaurantsInArea: function(area) {
-        // Complete here
+        const filtAreas = this.restaurants.filter(function(restaurant) {
+            return restaurant.address.area === area;
+        });
+        return filtAreas.length;
     },
 };
 

@@ -49,8 +49,13 @@ var shoppingCart = {
 };
 
 function addToShoppingCart(id) {
-
+    const productToAdd = products.find(function(p) {
+        return p.id === id
+    })
+    shoppingCart.totalPrice = shoppingCart.totalPrice + productToAdd.price
+    shoppingCart.selectedProducts.push(productToAdd.name)
 }
+
 
 function removeFromShoppingCart(id) {
 
