@@ -73,12 +73,22 @@ var restaurantFinderApplication = {
         return restaurantAvailable;
     },
     findRestaurantServingDish: function(dishName) {
-        const filRestSalad = this.restaurants.filter(function(rest) {
-            return rest.menu.includes(dishName);
-        });
-        return filRestSalad.map(function(rest) {
-            return rest.name;
-        });
+        let restaurantAvailableDish = "";
+        for (let i = 0; i < restaurants.length; i++) {
+            //console.log({ outside: restaurantAvailableDish });
+            if (this.restaurants[i].menu.includes(dishName)) {
+                // console.log({ inside: restaurantAvailableDish });
+                restaurantAvailableDish += restaurants[i].name;
+            }
+        }
+
+        return restaurantAvailableDish;
+        /* const filRestSalad = this.restaurants.filter(function(rest) {
+                                                    return rest.menu.includes(dishName);
+                                                });
+                                                return filRestSalad.map(function(rest) {
+                                                    return rest.name;
+                                                });*/
     },
 
     countNumberOfRestaurantsInArea: function(area) {
